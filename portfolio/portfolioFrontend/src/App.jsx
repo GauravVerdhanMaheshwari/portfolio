@@ -1,20 +1,14 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import { Footer, Header } from "./components";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const [msg, setMsg] = useState("");
-
-  useEffect(() => {
-    fetch("http://localhost:5000/")
-      .then((res) => res.json())
-      .then((data) => setMsg(data.message))
-      .catch((err) => console.error(err));
-  }, []);
-
   return (
-    <h1 className="text-white h-dvh content-center text-center text-3xl">
-      {" "}
-      hello {msg}
-    </h1>
+    <div>
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
   );
 }
 
