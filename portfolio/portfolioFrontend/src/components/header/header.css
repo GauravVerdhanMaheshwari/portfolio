@@ -29,7 +29,6 @@
   height: 2px;
   width: 100%;
   background-color: orange;
-  transform: scaleX(1);
+  transform: scaleX(0);
   transform-origin: left;
 }
-
