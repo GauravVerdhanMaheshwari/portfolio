@@ -1,15 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
 
 export default function Header() {
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const linkCss = ({ isActive }) =>
     isActive
       ? "text-orange-500 custom-underline-active"
       : "text-black custom-underline";
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        setShowHeader(false); // scrolling down
+      } else {
+        setShowHeader(true); // scrolling up
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/40 backdrop-blur-sm justify-center text-black p-5 flex shadow-md ">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 bg-white/40 backdrop-blur-sm text-black p-5 flex shadow-md transition-all duration-300 ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <nav>
         <ul className="flex gap-5">
           <li className="text-2xl p-3 font-semibold">
