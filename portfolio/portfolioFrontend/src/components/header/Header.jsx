@@ -19,7 +19,7 @@ export default function Header() {
           </li>
           <li className="text-2xl p-3 font-semibold ">
             <NavLink to="/about" className={linkCss}>
-              <h1>About</h1>
+              <h1>About Me</h1>
             </NavLink>
           </li>
           <li className="text-2xl p-3 font-semibold">
