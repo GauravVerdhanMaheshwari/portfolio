@@ -3,14 +3,14 @@ import { NavLink } from "react-router";
 
 function Hero() {
   const [memeImage, setMemeImage] = useState(false);
-  const image = Math.round((Math.random() * 100) % 22) + 1;
+  const image = Math.floor((Math.random() * 100) % 22) + 1;
   const ChangeImage = (e) => {
     if (!memeImage) {
-      e.target.src = `/${image}.jpg`;
+      e.target.src = `/${image}.webp`;
       console.log(image);
       setMemeImage(true);
     } else {
-      e.target.src = "/me.jpeg";
+      e.target.src = "/me.webp";
       setMemeImage(false);
     }
   };
@@ -37,7 +37,7 @@ function Hero() {
       </div>
       <div className="p-5 flex-1 text-center">
         <img
-          src="me.jpeg"
+          src="me.webp"
           alt="My image"
           className="w-100 rounded-3xl mx-auto flex object-center"
           onClick={ChangeImage}
