@@ -9,7 +9,7 @@ export default function Header() {
   const linkCss = ({ isActive }) =>
     isActive
       ? "text-orange-500 custom-underline-active"
-      : "text-black custom-underline";
+      : "text-black custom-underline transition-all duration-300 ease-in-out hover:text-shadow-[0px_1px_40px] hover:text-orange-500 hover: text-shadow-orange-400/50";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +31,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 bg-white/40 backdrop-blur-sm text-black p-5 flex shadow-md transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-xs text-black p-5 flex shadow-md transition-all duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
