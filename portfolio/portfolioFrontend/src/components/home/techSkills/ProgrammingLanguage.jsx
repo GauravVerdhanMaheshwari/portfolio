@@ -5,7 +5,7 @@ function ProgrammingLanguage() {
 
   const programmingImage = {
     Javascript: { image: "/JS.webp", classname: "w-20 h-20 mt-5 mx-2" },
-    Java: { image: "/java.webp", classname: "w-20 h-22 mt-5 mx-2" },
+    Java: { image: "/java.webp", classname: "w-18 h-22 mt-5 mx-2" },
     C: { image: "/C.webp", classname: "w-20 h-22 mt-5 mx-2" },
     PHP: { image: "/PHP.webp", classname: "w-30 h-20 mr-2 mt-7 mx-2" },
     Python: { image: "/python.webp", classname: "w-23 h-25 mt-5 mx-2" },
