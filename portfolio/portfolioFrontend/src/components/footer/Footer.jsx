@@ -11,6 +11,7 @@ export default function Footer() {
         <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
           <Link
             to="https://github.com/GauravVerdhanMaheshwari/"
+            target="_blank"
             className="text-gray-500"
           >
             <svg
@@ -27,6 +28,7 @@ export default function Footer() {
           </Link>
           <Link
             to="https://www.linkedin.com/in/gauravverdhanmaheshwari/"
+            target="_blank"
             className="text-gray-500"
           >
             <svg
