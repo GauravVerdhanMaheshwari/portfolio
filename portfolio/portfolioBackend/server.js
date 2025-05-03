@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const mongoose = require("mongoose");
+const axios = require("axios");
 
 // Load environment variables from .env file
 require("dotenv").config();
@@ -23,6 +24,23 @@ app.use(express.json());
 // Routes
 app.get("/", (req, res) => {
   res.json({ message: "Gamma ray bust!" });
+});
+
+app.get("/api/repos", async (req, res) => {
+  try {
+    const response = await axios.get(
+      "https://api.github.com/users/GauravVerdhanMaheshwari/repos",
+      {
+        headers: {
+          Authorization: `token ${process.env.GITHUB_API_KEY}`,
+        },
+      }
+    );
+    res.json(response.data);
+  } catch (error) {
+    console.error("❌ GitHub API error:", error.message);
+    res.status(500).json({ error: "Failed to fetch GitHub repos" });
+  }
 });
 
 //Server setup

@@ -56,6 +56,10 @@ function TechSkills() {
     },
   };
 
+  fetch("http://localhost:5000/api/repos")
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+
   return (
     <div className="my-10">
       <hr className="text-white h-0.5 my-8 bg-gray-200 border-0" />
