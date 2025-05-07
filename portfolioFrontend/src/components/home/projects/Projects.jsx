@@ -40,8 +40,6 @@ export default function Projects() {
                 repo.name !== "skills-copilot-codespaces-vscode" &&
                 numberOfRepos <= 3
               ) {
-                console.log(repo.id);
-                console.log(repoImages[repo.id]);
                 numberOfRepos++;
                 return (
                   <div
