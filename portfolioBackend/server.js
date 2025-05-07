@@ -36,7 +36,6 @@ app.get("/api/repos", async (req, res) => {
         },
       }
     );
-    console.log("GitHub Token:", process.env.GITHUB_API_KEY);
     res.json(response.data);
   } catch (error) {
     console.error("❌ GitHub API error:", error.message);
