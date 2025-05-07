@@ -36,6 +36,7 @@ app.get("/api/repos", async (req, res) => {
         },
       }
     );
+    console.log("GitHub Token:", process.env.GITHUB_API_KEY);
     res.json(response.data);
   } catch (error) {
     console.error("❌ GitHub API error:", error.message);
@@ -44,5 +45,5 @@ app.get("/api/repos", async (req, res) => {
 });
 
 //Server setup
-const PORT = 5000;
+const PORT = 3000 || process.env.PORT;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
