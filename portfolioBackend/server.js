@@ -43,6 +43,43 @@ app.get("/api/repos", async (req, res) => {
   }
 });
 
+app.get("/api/blogs", async (req, res) => {
+  res.json([
+    {
+      id: 1,
+      title: "Coding Journey",
+      content: "This is a blog about my coding journey",
+      topic: { topic1: "Coding", topic2: "Story" },
+      date: "2021-01-01",
+      link: "https://www.cineby.app/tv/19885/1/2",
+    },
+    {
+      id: 2,
+      title: "React Journey",
+      content: "This is a blog about my React journey",
+      topic: { topic1: "Coding", topic2: "Story" },
+      date: "2021-01-01",
+      link: "https://www.cineby.app/tv/19885/1/2",
+    },
+    {
+      id: 3,
+      title: "NodeJS Journey",
+      content: "This is a blog about my NodeJS journey",
+      topic: { topic1: "Coding" },
+      date: "2021-01-01",
+      link: "https://www.cineby.app/tv/19885/1/2",
+    },
+    {
+      id: 4,
+      title: "HTML Journey",
+      content: "This is a blog about my HTML journey",
+      topic: "Coding",
+      date: "2021-01-01",
+      link: "https://www.cineby.app/tv/19885/1/2",
+    },
+  ]);
+});
+
 //Server setup
 const PORT = 3000 || process.env.PORT;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
