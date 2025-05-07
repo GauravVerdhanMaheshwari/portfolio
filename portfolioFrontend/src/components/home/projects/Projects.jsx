@@ -44,7 +44,7 @@ export default function Projects() {
                 return (
                   <div
                     key={repo.id}
-                    className="w-full h-full bg-blue-400/90 shadow-[0px_0px_1000px] shadow-blue-400/90 border border-blue-100/80 inset-shadow-[0px_10px_100px] inset-shadow-blue-600 rounded-xl p-10 flex flex-row"
+                    className="w-full h-full bg-blue-400/90 shadow-[0px_0px_100px] shadow-blue-400/90 border border-blue-100/80 inset-shadow-[0px_10px_100px] inset-shadow-blue-600 rounded-xl p-10 m-5 flex flex-row"
                   >
                     <li key={repo.id} className=" w-full h-full ">
                       <h3 className="text-white text-3xl font-semibold text-center underline underline-offset-10 p-7 text-pretty">
