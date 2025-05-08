@@ -10,15 +10,21 @@
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: orange;
+  background-color: rgb(249 115 22); /* Tailwind orange-500 */
   transform: scaleX(0);
-  transform-origin: right; /* start from right */
+  transform-origin: right;
   transition: transform 0.3s ease;
 }
 
 .custom-underline:hover::after {
   transform: scaleX(1);
-  transform-origin: left; /* end at left */
+  transform-origin: left;
+}
+
+.custom-underline-active {
+  position: relative;
+  display: inline-block;
+  color: rgb(249 115 22); /* Tailwind orange-500 */
 }
 
 .custom-underline-active::after {
@@ -28,7 +34,7 @@
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: orange;
-  transform: scaleX(0);
+  background-color: rgb(249 115 22); /* Tailwind orange-500 */
+  transform: scaleX(1); /* Always show underline for active */
   transform-origin: left;
 }
