@@ -8,13 +8,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from "./App.jsx";
-import { Home, About, Contact, User } from "./components";
+import { Home, About, Contact, User, Project } from "./components";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
+      <Route path="projects" element={<Project />} />
       <Route path="contact" element={<Contact />} />
       <Route path="user/:id" element={<User />} />
     </Route>
