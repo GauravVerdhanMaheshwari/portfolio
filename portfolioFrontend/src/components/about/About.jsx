@@ -23,7 +23,7 @@ export default function About() {
           <img
             src="me.webp"
             alt="About Me"
-            className="rounded-lg max-h-[80vh] w-full object-cover"
+            className="rounded-lg max-h-[80vh] w-full object-cover sm:object-contain"
           />
         </div>
 
