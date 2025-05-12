@@ -43,7 +43,7 @@ export default function Projects() {
 
   return (
     <>
-      <div className="flex flex-row justify-around my-30 sm:mb-8 md:mb-10">
+      <div className="flex flex-row justify-around my-25 sm:mb-8 md:mb-10">
         <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold text-left underline underline-offset-8 sm:underline-offset-10 text-shadow-gray-200/65 text-shadow-[1px_1px_19px]">
           My Projects
         </h1>
